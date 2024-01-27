@@ -2,6 +2,8 @@ plugins {
     kotlin("jvm")
 
     id("org.hibernate.orm")
+    id("org.jetbrains.kotlin.plugin.jpa")
+    id("org.jetbrains.kotlin.plugin.allopen")
 }
 
 repositories {
