@@ -4,7 +4,7 @@
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
     <persistence-unit name="hello">
         <class>book.shop.domain.Member</class>
-        <class>book.shop.domain.Orders</class>
+        <class>book.shop.domain.Order</class>
         <class>book.shop.domain.OrderItem</class>
         <class>book.shop.domain.Item</class>
 
