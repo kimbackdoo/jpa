@@ -4,3 +4,4 @@ plugins {
 rootProject.name = "jpa"
 include("ex1")
 include("ex2")
+include("ex3")
