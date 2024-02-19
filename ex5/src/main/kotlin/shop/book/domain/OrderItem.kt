@@ -8,10 +8,10 @@ class OrderItem(
 
         val count: Int,
 
-        @ManyToOne
+        @ManyToOne(fetch = FetchType.LAZY)
         val order: Order,
 
-        @ManyToOne
+        @ManyToOne(fetch = FetchType.LAZY)
         val item: Product,
 
         @Id @GeneratedValue(strategy = GenerationType.IDENTITY)

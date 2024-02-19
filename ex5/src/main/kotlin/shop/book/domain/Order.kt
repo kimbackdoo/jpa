@@ -5,10 +5,10 @@ import java.time.LocalDateTime
 
 @Entity(name = "TB_ORDER")
 class Order(
-        @ManyToOne
+        @ManyToOne(fetch = FetchType.LAZY)
         val member: Member,
 
-        @OneToOne
+        @OneToOne(fetch = FetchType.LAZY, cascade = [CascadeType.ALL])
         val delivery: Delivery? = null,
 
         val orderDate: LocalDateTime,
@@ -16,7 +16,7 @@ class Order(
         @Enumerated(value = EnumType.STRING)
         val status: OrderStatus,
 
-        @OneToMany(mappedBy = "order")
+        @OneToMany(mappedBy = "order", cascade = [CascadeType.ALL])
         val orderItems: MutableList<OrderItem> = mutableListOf(),
 
         @Id @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -6,7 +6,7 @@ import jakarta.persistence.*
 class Category(
         val name: String,
 
-        @ManyToOne
+        @ManyToOne(fetch = FetchType.LAZY)
         val parent: Category? = null,
 
         @OneToMany(mappedBy = "parent")
