@@ -11,10 +11,10 @@ fun main() {
     val transaction = entityManager.transaction
     transaction.begin()
 
-    val delivery = Delivery(city = "city", street = "street", zipcode = "zipcode", status = DeliveryStatus.READY)
+    val delivery = Delivery(address = Address(city = "city", street = "street", zipcode = "zipcode"), status = DeliveryStatus.READY)
     entityManager.persist(delivery)
 
-    val member = Member(name = "member1", city = "city", street = "street", zipcode = "zipcode")
+    val member = Member(name = "member1", address = Address(city = "city", street = "street", zipcode = "zipcode"))
     entityManager.persist(member)
 
     val album = Album(name = "album1", price = 1000, stockQuantity = 10, artist = "artist", etc = "etc")

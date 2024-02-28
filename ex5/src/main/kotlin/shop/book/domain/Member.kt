@@ -6,11 +6,8 @@ import jakarta.persistence.*
 class Member(
         val name: String,
 
-        val city: String,
-
-        val street: String,
-
-        val zipcode: String,
+        @Embedded
+        val address: Address,
 
         @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
         val id: Long = 0

@@ -4,11 +4,8 @@ import jakarta.persistence.*
 
 @Entity(name = "TB_DELIVERY")
 class Delivery(
-        val city: String,
-
-        val street: String,
-
-        val zipcode: String,
+        @Embedded
+        val address: Address,
 
         @Enumerated(value = EnumType.STRING)
         val status: DeliveryStatus,
